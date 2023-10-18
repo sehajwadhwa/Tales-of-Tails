@@ -1,4 +1,4 @@
-import { usePassageLogout } from "../hooks";
+import { usePassageLogout } from "../actions";
 import { useNavigate } from "react-router-dom";
 
 export const LogoutButton = () => {
