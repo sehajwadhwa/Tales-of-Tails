@@ -8,6 +8,9 @@ app = Flask(__name__)
 from flask_cors import CORS
 CORS(app, support_credentials=True)
 
+@app.route("/")
+def tales_of_tails():
+    return "<h1> This is our Tales of Tails page</h1>"
 
 
 
