@@ -1,6 +1,6 @@
 import styles from "../styles/Dashboard.module.css";
 import { PassageAuthGuard } from "@passageidentity/passage-react";
-import { usePassageUserInfo } from "../hooks/";
+import { usePassageUserInfo } from "../actions/";
 import LogoutButton from "../components/LogoutButton";
 
 function Dashboard() {

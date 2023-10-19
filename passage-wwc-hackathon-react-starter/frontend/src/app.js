@@ -5,7 +5,7 @@ import { PassageProvider } from "@passageidentity/passage-react";
 import Home from "./views/Home";
 import Dashboard from "./views/Dashboard";
 import Profile from "./views/Profile";
-import Banner from "./components/banner";
+import Header from "./components/Header";
 import styles from "./styles/App.module.css";
 import {Login} from "./components/Login";
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <PassageProvider appId={process.env.REACT_APP_PASSAGE_APP_ID}>
       <div>
-        <Banner />
+        <Header />
         <div className={styles.mainContainer}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
