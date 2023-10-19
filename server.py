@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_app.controllers import lost_and_found_routes
 
 # CORS - this will allow the React app to connect to the API
-# Not sure how to resolve flask_cors
+    # Make sure you have this installed: pip install -U flask-cors
 from flask_cors import CORS
 
 
