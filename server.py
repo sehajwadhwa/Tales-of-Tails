@@ -8,10 +8,6 @@ app = Flask(__name__)
 from flask_cors import CORS
 CORS(app, support_credentials=True)
 
-if __name__=="__main__":
-    app.run(debug=True,
-    host='127.0.0.1',
-    port='5000')
 
 @app.route('/pet-lost-and-found', methods=['GET'])
 def get_pet_lost_and_found():
@@ -37,5 +33,10 @@ def get_pet_inventory():
 def get_shelters(zip):
     #todo get pet inventory
     return jsonify({'pet':"get_pet_inventory", 'zip': zip})
+
+if __name__=="__main__":
+    app.run(debug=True,
+    host='127.0.0.1',
+    port='5000')
 
 

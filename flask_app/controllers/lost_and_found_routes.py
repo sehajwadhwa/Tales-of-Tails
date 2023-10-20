@@ -14,11 +14,6 @@ def add_pet_inventory():
     #todo add pet inventory
     return "add_pet_inventory"
 
-#@app.route('/pet-lost-and-found', methods=['GET'])
-#def get_pet_lost_and_found():
- #   #todo get pet lost and found
- #  return jsonify({'pet':"get_pet_lost_and_found"})
-
 @app.route('/pet-inventory', methods=['GET'])
 def get_pet_inventory():
     #todo get pet inventory
