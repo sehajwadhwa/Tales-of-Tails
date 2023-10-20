@@ -7,9 +7,9 @@ import Dashboard from "./views/Dashboard";
 import Profile from "./views/Profile";
 import Header from "./components/Header";
 import styles from "./styles/App.module.css";
-import { Register } from "./components/Register";
-import { Login } from "./components/Login";
+
 import {ControllerTest} from "./components/ControllerTest";
+import {Login} from "./components/Login";
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
-            <Route path="/register" element={<Register />}></Route>
-            <Route path="/login" element={<Login />}></Route>
             <Route path="/test" element={<ControllerTest/>}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+
           </Routes>
         </div>
       </div>
