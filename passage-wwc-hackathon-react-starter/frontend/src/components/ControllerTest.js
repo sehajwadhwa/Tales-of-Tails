@@ -5,13 +5,11 @@ export function ControllerTest(){
 const [data, setdata] = useState('');
 
 useEffect(() => {
-    fetch("/pet-lost-and-found").then((result) => 
-    {
-        result.json.then((data) => {
-            setdata(data);
-            console.log(data);
-        })
-    });
+    fetch("/pet-lost-and-found").then(res => {
+        return res.json()
+    }).then(data => {
+        console.log(data);
+    })
 }, []);
 
 
