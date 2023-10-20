@@ -23,8 +23,7 @@ p {
   justify-content: space-between;
   display: flex;
   width: 100%;
-  box-shadow: 5px 5px 10px rgb(58, 50, 50);
-  margin-top: 10px;
+  box-shadow: 5px 5px 6px rgb(58, 50, 50);
   margin-bottom: 10px;
 }
 

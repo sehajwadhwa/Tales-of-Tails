@@ -17,7 +17,7 @@ function App() {
       <div>
         <Header />
         <HomeScreen />
-        <div className={styles.mainContainer}>
+        {/* <div className={styles.mainContainer}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
@@ -25,7 +25,7 @@ function App() {
             <Route path="/register" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
           </Routes>
-        </div>
+        </div> */}
       </div>
     </PassageProvider>
   );

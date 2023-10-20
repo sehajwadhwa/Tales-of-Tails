@@ -5,6 +5,7 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 body:before {
   position: absolute;
