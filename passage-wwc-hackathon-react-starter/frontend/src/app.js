@@ -9,12 +9,14 @@ import Header from "./components/Header";
 import styles from "./styles/App.module.css";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
+import HomeScreen from "./containers/HomeScreen";
 
 function App() {
   return (
     <PassageProvider appId={process.env.REACT_APP_PASSAGE_APP_ID}>
       <div>
         <Header />
+        <HomeScreen />
         <div className={styles.mainContainer}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
