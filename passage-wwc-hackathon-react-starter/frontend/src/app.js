@@ -7,7 +7,6 @@ import Dashboard from "./views/Dashboard";
 import Profile from "./views/Profile";
 import Header from "./components/Header";
 import styles from "./styles/App.module.css";
-import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import HomeScreen from "./containers/HomeScreen";
 import { ControllerTest } from "./components/ControllerTest";
