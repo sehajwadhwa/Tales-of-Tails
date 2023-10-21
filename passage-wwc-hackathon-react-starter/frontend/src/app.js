@@ -7,16 +7,17 @@ import Dashboard from "./views/Dashboard";
 import Profile from "./views/Profile";
 import Header from "./components/Header";
 import styles from "./styles/App.module.css";
-
-import {ControllerTest} from "./components/ControllerTest";
-import {Login} from "./components/Login";
+import { Login } from "./components/Login";
+import HomeScreen from "./containers/HomeScreen";
+import { ControllerTest } from "./components/ControllerTest";
 
 function App() {
   return (
     <PassageProvider appId={process.env.REACT_APP_PASSAGE_APP_ID}>
       <div>
         <Header />
-        <div className={styles.mainContainer}>
+        <HomeScreen />
+        {/* <div className={styles.mainContainer}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
@@ -25,7 +26,7 @@ function App() {
             <Route path="/login" element={<Login/>}></Route>
 
           </Routes>
-        </div>
+        </div> */}
       </div>
     </PassageProvider>
   );

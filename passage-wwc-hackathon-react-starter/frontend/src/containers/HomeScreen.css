@@ -1,0 +1,144 @@
+h1 {
+  font-family: "Dosis", sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+h2 {
+  font-family: "Dosis", sans-serif;
+  font-size: 40px;
+}
+p {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+.home-screen-wrapper {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.banner-wrapper {
+  background: white;
+  overflow: hidden;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  box-shadow: 5px 5px 6px rgb(58, 50, 50);
+  margin-bottom: 10px;
+}
+
+/* //middle  */
+.m-container {
+  margin-top: 10rem;
+  flex-direction: column;
+  display: flex;
+}
+.lilac-word {
+  color: rgb(173, 167, 255);
+}
+.banner-text {
+  text-align: center;
+}
+
+.banner-sub-text {
+  text-align: center;
+}
+.adopt-button {
+  margin-top: 5%;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: rgb(173, 167, 255);
+  border: none;
+  color: white;
+}
+button > span,
+button > img {
+  margin-left: 2rem;
+  vertical-align: middle;
+  height: 2rem;
+}
+
+/* //left side */
+.l-container {
+  position: relative;
+  height: 35rem;
+  width: 50rem;
+}
+
+/* //right side */
+.r-container {
+  position: relative;
+  height: 35rem;
+  width: 50rem;
+}
+.lilac-dog {
+  position: absolute;
+  padding-top: 10px;
+  padding-right: 10px;
+  height: 60%;
+  top: 0;
+  right: 0;
+}
+.yellow-paw {
+  position: absolute;
+  padding-right: 10px;
+  padding-bottom: 2rem;
+  height: 15%;
+  bottom: 0;
+  right: 0;
+}
+.yellow-cat {
+  position: absolute;
+  padding-left: 10px;
+  height: 70%;
+  bottom: 0;
+  left: 0;
+}
+.lilac-paw {
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 15%;
+  top: 0;
+  left: 0;
+}
+.pet-scroll-container {
+  background: white;
+  border-radius: 30px;
+  width: 70%;
+  height: 70%;
+  box-shadow: 5px 5px 10px rgb(58, 50, 50);
+  padding: 20px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.carousal {
+  padding: 20px;
+  padding-bottom: 15px;
+  display: flex;
+  overflow: hidden;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  flex: 3;
+}
+.fun-fact-banner {
+  background: white;
+  display: flex;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgb(58, 50, 50);
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+.text-container {
+  padding: 2rem;
+}
+.dog-woman {
+  position: relative;
+  height: fit-content;
+  width: 20rem;
+}
+.helper-container {
+  display: inherit;
+}
