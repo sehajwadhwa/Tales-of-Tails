@@ -5,8 +5,11 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-sqlalchemy = "*"
+flask-cors = "*"
+passage-identity = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "*"
