@@ -18,7 +18,6 @@ function Header({ user, setUser }) {
         <Link to={"/adopt"}>Adopt</Link>
         <Link to={"/shelter"}>Shelters</Link>
         <Link to={"/faq"}>FAQ</Link>
-        <Link to={"/pet-lost-and-found"}>l&f</Link>
         {/* <LogoutButton /> */}
       </div>
 

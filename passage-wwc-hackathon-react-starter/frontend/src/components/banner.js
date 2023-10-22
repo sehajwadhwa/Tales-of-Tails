@@ -10,7 +10,6 @@ function Banner() {
             <div className={styles.spacer}></div>
             <Link to={'/profile'}>Profile</Link>
             <Link to={'/login'}>Login</Link>
-            <Link to={'/pet-lost-and-found'}>test</Link>
             <LogoutButton/>
         </div>
     );

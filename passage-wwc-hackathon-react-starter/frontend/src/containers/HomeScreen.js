@@ -11,7 +11,6 @@ import donate from "../assets/donations.png";
 import PetOverviewCard from "../components/PetOverviewCard";
 import HelperCard from "../components/HelperCard";
 import pets from "../mockData.json";
-import {ControllerTest} from "../components/ControllerTest";
 
 const HomeScreen = () => {
   return (
