@@ -1,10 +1,21 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import SubHeaderBar from "../components/SubHeaderBar";
 import styles from "../styles/Adopt.module.css";
-import pets from "../mockData/mockData.json";
 import PetCard from "../components/PetCard";
 
+
+
 const Adopt = () => {
+  const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    fetch("/pet-lost-and-found").then(res => {
+        return res.json()
+    }).then(data => {
+        setPets(data);
+    })
+  }, []);
+
   return (
     <div className={styles.screenContainer}>
       <SubHeaderBar title="Adopt Here" />

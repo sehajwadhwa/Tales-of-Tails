@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SubHeaderBar from "../components/SubHeaderBar";
 import styles from "../styles/LostAndFoundScreen.module.css";
 import Select from "react-select";
@@ -6,7 +6,7 @@ import typeOptions from "../mockData/petType.json";
 import sizeOptions from "../mockData/size.json";
 import breedOptions from "../mockData/breed.json";
 import genderOptions from "../mockData/gender.json";
-import lostPets from "../mockData/mockData.json";
+//import lostPets from "../mockData/mockData.json";
 import PetCard from "../components/PetCard";
 import noResults from "../assets/no_results.png";
 
@@ -18,6 +18,7 @@ const LostAndFoundScreen = () => {
   const [searchText, setSearchText] = useState("");
   const [searchClicked, setSearchClicked] = useState(false);
   const [filteredPets, setFilteredPets] = useState([]);
+  const [lostPets, setLostPets] = useState([]);
 
   const handleTypeChange = (selectedOption) => {
     setSelectedType(selectedOption);
@@ -69,6 +70,15 @@ const LostAndFoundScreen = () => {
     setSelectedGender(null);
     setSearchText("");
   };
+
+  useEffect(() => {
+    fetch("/pet-lost-and-found").then(res => {
+        return res.json()
+    }).then(data => {
+        setLostPets(data);
+    })
+  }, []);
+
   return (
     <div className={styles.screenContainer}>
       <SubHeaderBar title="Lost and Found" />

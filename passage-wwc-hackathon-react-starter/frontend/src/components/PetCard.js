@@ -3,7 +3,7 @@ import dogImage from "../assets/dog_image.png";
 export const PetCard = ({ pet }) => {
   return (
     <div className={styles.petContainer}>
-      <img className={styles.dogImage} src={dogImage} />
+      <img className={styles.dogImage} src={pet.Image} />
       <table>
         <tbody>
           <tr>

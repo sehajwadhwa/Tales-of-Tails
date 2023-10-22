@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomeScreen.css";
 import whitePaw from "../assets/white_paw.png";
 import lilacPaw from "../assets/lilac_paw.png";
@@ -11,13 +11,14 @@ import donate from "../assets/donations.png";
 import PetOverviewCard from "../components/PetOverviewCard";
 import HelperCard from "../components/HelperCard";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import pets from "../mockData/mockData.json";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const [pets, setPets] = useState([]);
   const cardsPerPage = 3;
   const maxCards = 5;
+  
 
   const handleNext = () => {
     if (startIndex + cardsPerPage < maxCards) {
@@ -36,6 +37,16 @@ const HomeScreen = () => {
       ? pets.slice(startIndex, startIndex + cardsPerPage - 1)
       : pets.slice(startIndex, startIndex + cardsPerPage);
   const shouldShowViewMore = startIndex + cardsPerPage === maxCards;
+  
+  
+
+  useEffect(() => {
+    fetch("/pet-lost-and-found").then(res => {
+        return res.json()
+    }).then(data => {
+        setPets(data);
+    })
+  }, []);
 
   return (
     <div className="home-screen-wrapper">
@@ -77,9 +88,7 @@ const HomeScreen = () => {
           <div className="carousal">
             {visiblePets.map((pet) => (
               <PetOverviewCard
-                key={pet.name}
-                name={pet.name}
-                desc={pet.description}
+                pet={pet}
               />
             ))}
             {shouldShowViewMore && (
