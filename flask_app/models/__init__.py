@@ -1,1 +1,2 @@
-from .lost_and_found_methods import Shelter, Pets
+from .models import Shelters, Pets
+from .models import db
