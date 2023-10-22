@@ -5,7 +5,7 @@ h1 {
 }
 h2 {
   font-family: "Dosis", sans-serif;
-  font-size: 40px;
+  font-size: 35px;
 }
 p {
   font-family: "Dosis", sans-serif;
@@ -32,6 +32,7 @@ p {
   margin-top: 10rem;
   flex-direction: column;
   display: flex;
+  align-items: center;
 }
 .lilac-word {
   color: rgb(173, 167, 255);
@@ -45,11 +46,7 @@ p {
 }
 .adopt-button {
   margin-top: 5%;
-  padding: 10px;
-  border-radius: 50px;
-  background-color: rgb(173, 167, 255);
-  border: none;
-  color: white;
+  align-self: center;
 }
 button > span,
 button > img {
@@ -105,7 +102,6 @@ button > img {
 .pet-scroll-container {
   background: white;
   border-radius: 30px;
-  width: 70%;
   height: 70%;
   box-shadow: 5px 5px 10px rgb(58, 50, 50);
   padding: 20px;
@@ -113,7 +109,18 @@ button > img {
   margin-bottom: 2rem;
   align-items: center;
 }
-
+.carousal-container {
+  display: flex;
+  align-items: center;
+}
+FaChevronLeft {
+  flex: 1;
+  align-self: center;
+}
+FaChevronRight {
+  flex: 1;
+  align-self: center;
+}
 .carousal {
   padding: 20px;
   padding-bottom: 15px;
@@ -141,4 +148,15 @@ button > img {
 }
 .helper-container {
   display: inherit;
+}
+.viewMore {
+  background: white;
+  border-radius: 25px;
+  width: 200px;
+  height: 350px;
+  padding: 10px;
+  box-shadow: 5px 3px 10px rgb(58, 50, 50);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

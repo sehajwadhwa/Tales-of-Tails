@@ -1,0 +1,6 @@
+[
+  { "value": "male", "label": "Male" },
+  { "value": "female", "label": "Female" },
+  { "value": "neutered", "label": "Neutered" },
+  { "value": "spayed", "label": "Spayed" }
+]
