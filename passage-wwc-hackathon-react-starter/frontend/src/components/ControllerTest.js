@@ -30,9 +30,11 @@ useEffect(() => {
         return res.json()
     }).then(data => {
         console.log(data);
+        //setdata(data[8]['Image']);
     })
 }, []);
 
+/*
 useEffect(() => {
     fetch("/add-pet-lost-and-found", {
         headers: {'content-type': 'application/json'}, 
@@ -42,16 +44,17 @@ useEffect(() => {
         return res.json()
     }).then(data => {
         console.log(data);
+        setdata(data[0].Image);
     }).catch(error => {
         console.log(error.message);
     })
-}, []);
+}, []);*/
 
 
 return(
     <div>
         Here?
-        {data}
+        <img src={data} alt={"uh oh"} />
     </div>
 );
 }
