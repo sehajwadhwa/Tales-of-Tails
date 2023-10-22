@@ -13,7 +13,6 @@ import HelperCard from "../components/HelperCard";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import pets from "../mockData/mockData.json";
 import { Link } from "react-router-dom";
-import { ControllerTest } from "../components/ControllerTest";
 
 const HomeScreen = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -39,7 +38,6 @@ const HomeScreen = () => {
   const shouldShowViewMore = startIndex + cardsPerPage === maxCards;
 
   return (
-    
     <div className="home-screen-wrapper">
       <div className="banner-wrapper">
         <div className="l-container">
@@ -117,6 +115,7 @@ const HomeScreen = () => {
           text="Join us in making tails wag and hearts purr – become a volunteer at our pet adoption center and be a part of the love-filled journey to finding forever homes for our furry friends!"
           buttonText="Volunteer"
         />
+
         <HelperCard
           image={donate}
           text="Your generosity can change lives – make a donation today to support our mission and help provide loving care, shelter, and hope to pets in need."

@@ -114,9 +114,9 @@ const LostAndFoundScreen = () => {
       </div>
       {searchClicked ? (
         filteredPets.length === 0 ? (
-          <div className="center-message">
-            <img className={styles.noResults} src={noResults} />
-            <h2 className="no-results-message">
+          <div className={styles.centerMessage}>
+            <img src={noResults} />
+            <h2 className={styles.noResultsMessage}>
               No matching results found. <br /> Please try again later
             </h2>
           </div>
