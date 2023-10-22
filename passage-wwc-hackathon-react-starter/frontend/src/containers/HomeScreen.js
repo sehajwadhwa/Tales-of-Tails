@@ -13,6 +13,7 @@ import HelperCard from "../components/HelperCard";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import pets from "../mockData/mockData.json";
 import { Link } from "react-router-dom";
+import { ControllerTest } from "../components/ControllerTest";
 
 const HomeScreen = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -38,7 +39,9 @@ const HomeScreen = () => {
   const shouldShowViewMore = startIndex + cardsPerPage === maxCards;
 
   return (
+    
     <div className="home-screen-wrapper">
+      <ControllerTest/>
       <div className="banner-wrapper">
         <div className="l-container">
           <img className="yellow-cat" src={yellowCat} />

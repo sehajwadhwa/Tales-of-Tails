@@ -12,6 +12,7 @@ CORS(app, support_credentials=True)
 
 f = open('flask_app\jsonFiles\mockData.json')
 data = json.load(f)
+
 f.close()
 
 @app.route('/pet-lost-and-found', methods=['GET'])
