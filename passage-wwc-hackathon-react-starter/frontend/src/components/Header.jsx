@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/Header.module.css";
 import LogoutButton from "./LogoutButton";
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
+import { Passage } from "@passageidentity/passage-js";
+import { usePassageUserInfo } from "../actions";
 
-function Header({ user, setUser }) {
+function Header() {
+  const { loading, userInfo } = usePassageUserInfo();
   return (
     <div className={styles.mainHeader}>
       <Link to={"/"}>
@@ -14,32 +17,19 @@ function Header({ user, setUser }) {
       <div className={styles.content}>
         <Link to={"/lost-and-found"}>Lost & Found</Link>
         <Link to={"/adopt"}>Adopt</Link>
-        <Link to={"/shelter"}>Shelters</Link>
-        <Link to={"/faq"}>FAQ</Link>
-        {/* <LogoutButton /> */}
+        <Link to={"/shelter-screen"}>Shelters</Link>
       </div>
-
-      <ul>
-        {
-          // checking if the user is set
-          user ? (
-            <div>
-              <p className="navbar">Welcome , {user.displayName} </p>
-              <button>
-                <LogoutButton />
-              </button>
-            </div>
-          ) : (
-            <div className="navbar">
-              <Link to={"/login"}>
-                <button>Associate Login</button>
-              </Link>
-            </div>
-          )
-        }
-      </ul>
-
-      {/* <Link to={"/login"}> <button>Associate Login</button></Link> */}
+      {userInfo && !loading ? (
+        <Link to={"/profile"}>
+          {" "}
+          <button>Profile</button>
+        </Link>
+      ) : (
+        <Link to={"/login"}>
+          {" "}
+          <button>Associate Login</button>
+        </Link>
+      )}
     </div>
   );
 }

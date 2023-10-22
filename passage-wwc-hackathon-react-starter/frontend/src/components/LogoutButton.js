@@ -9,6 +9,7 @@ export const LogoutButton = () => {
   const signout = () => {
     logout();
     navigate("/");
+    window.location.reload();
   };
   return <button onClick={signout}>Sign Out</button>;
 };

@@ -115,6 +115,7 @@ const HomeScreen = () => {
           text="Join us in making tails wag and hearts purr – become a volunteer at our pet adoption center and be a part of the love-filled journey to finding forever homes for our furry friends!"
           buttonText="Volunteer"
         />
+
         <HelperCard
           image={donate}
           text="Your generosity can change lives – make a donation today to support our mission and help provide loving care, shelter, and hope to pets in need."

@@ -8,6 +8,7 @@
   padding: 10px;
   box-shadow: 5px 5px 10px rgb(58, 50, 50);
   margin-right: 100px;
+  align-items: center;
 }
 .helperImage {
   margin-left: 40px;
@@ -19,13 +20,4 @@
   margin: 0;
   padding-bottom: 10px;
   text-align: center;
-}
-.helperButton {
-  margin-top: 5%;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 50px;
-  background-color: rgb(173, 167, 255);
-  border: none;
-  color: white;
 }

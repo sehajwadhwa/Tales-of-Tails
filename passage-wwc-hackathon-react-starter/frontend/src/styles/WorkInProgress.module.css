@@ -1,0 +1,14 @@
+.centerMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.noResultsMessage {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
