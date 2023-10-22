@@ -29,7 +29,7 @@ def create_app():
 
 
     @app.route('/create-shelter', methods=['POST'])
-    def createUser():
+    def createShelter():
         # g.user will be set to the Passage user id
         passage_user = psg.authenticateRequest(g.user)
         
@@ -42,6 +42,37 @@ def create_app():
 
         return jsonify({"result": 200})
 
+    @app.route('/create-pet', methods=['POST'])
+    def createPet():
+        # g.user will be set to the Passage user id
+        data = request.get_json
+        shelter_id = data.get('shelter_id')
+        
+        shelter = Shelters.query.get(shelter_id)
+        if shelter is None:
+            return jsonify({"message": "Shelter not found"}), 404
+
+        
+        new_pet = Pets(
+            name = data['name'],
+            pet_picture = data['pet_image'],
+            date_of_birth = data[''],
+            breed = data['breed'],
+            type_of_pet = data['type_of_pet'],
+            gender = data['gender'],
+            color = data['color'],
+            size =  data['size'],
+            weight = data['weight'],
+            description = data['description'],
+            shelter_id = shelter.id
+            )
+
+        # commit to database
+        db.session.add(new_pet)
+        db.session.commit()
+
+        return jsonify({"message": "Pet added successfully"}), 201
+
     @app.route('/shelters', methods=['GET'])
     def get_shelters():
         # g.user will be set to the Passage user id
@@ -52,10 +83,14 @@ def create_app():
         
         return jsonify(shelters_list)
 
-    @app.route('/pet-lost-and-found', methods=['GET'])
+    @app.route('/pets', methods=['GET'])
     def get_pet_lost_and_found():
         #todo get pet lost and found
-        return jsonify({'pets':"get_pet_lost_and_found"})
+        pets = Pets.query.all()
+        pets_list = [{
+            "id": pet.id, "name": pet.name
+        } for pet in pets]
+        return jsonify({pets_list})
 
     @app.route('/add-pet-lost-and-found', methods=['POST'])
     def add_pet_lost_and_found():
@@ -67,12 +102,18 @@ def create_app():
         #todo add pet inventory
         return jsonify({'pet':"add_pet_inventory"})
 
-    @app.route('/pet-inventory', methods=['GET'])
-    def get_pet_inventory():
-        #todo get pet inventory
-        return jsonify({'pet':"get_pet_inventory"})
+    @app.route('/shelters/<int:shelter_id>/pets', methods=['GET'])
+    def get_pets_for_shelter(shelter_id):
+        shelter = Shelters.query.get(shelter_id)
+        if shelter is None:
+            return jsonify({"message": "Shelter not found"}), 404
 
-    # @app.route('/get-shelters/<int:zip>', methods=['GET'])
+        pets = Pets.query.filter_by(shelter_id=shelter_id).all()
+
+        pet_list = [{"id": pet.id, "name": pet.name} for pet in pets]
+        return jsonify({"pets": pet_list})
+    
+    # @app.route('/get-pets/<int:zip>', methods=['GET'])
     # def get_shelters(zip):
     #     #todo get pet inventory
     #     return jsonify({'pet':"get_pet_inventory", 'zip': zip})
