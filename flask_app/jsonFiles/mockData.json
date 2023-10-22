@@ -17,7 +17,8 @@
     "spayNeuterStatus": "Neutered",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Buddy is fed high-quality dog food twice a day. He enjoys both dry kibble and wet food.",
-    "groomingNeeds": "Regular brushing is recommended to maintain Buddy's beautiful coat."
+    "groomingNeeds": "Regular brushing is recommended to maintain Buddy's beautiful coat.",
+    "Image": "./Images/golden-retriever-dog.png"
   },
   {
     "id": 2,
@@ -37,7 +38,8 @@
     "spayNeuterStatus": "Neutered",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Whiskers enjoys a mix of dry and wet cat food, fed twice a day.",
-    "groomingNeeds": "Regular grooming is not required, but he enjoys being brushed."
+    "groomingNeeds": "Regular grooming is not required, but he enjoys being brushed.",
+    "Image": "./Images/siamese-cat.png"
   },
   {
     "id": 3,
@@ -57,7 +59,8 @@
     "spayNeuterStatus": "Spayed",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Lola is fed a balanced diet of high-quality dog food twice a day.",
-    "groomingNeeds": "Minimal grooming needs, but regular baths are recommended."
+    "groomingNeeds": "Minimal grooming needs, but regular baths are recommended.",
+    "Image": "./Images/Beagle-dog.png"
   },
   {
     "id": 4,
@@ -77,7 +80,8 @@
     "spayNeuterStatus": "N/A",
     "vaccinationRecords": "N/A",
     "dietAndFeedingRoutine": "Kiwi enjoys a diet of fresh fruits, vegetables, and high-quality parrot food.",
-    "groomingNeeds": "Regular wing trimming is recommended for safety."
+    "groomingNeeds": "Regular wing trimming is recommended for safety.",
+    "Image": "./Images/Budgerigar-bird.png"
   },
   {
     "id": 5,
@@ -97,7 +101,8 @@
     "spayNeuterStatus": "Spayed",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Coco is fed a combination of dry and wet cat food twice a day.",
-    "groomingNeeds": "Regular brushing is recommended to keep her coat healthy."
+    "groomingNeeds": "Regular brushing is recommended to keep her coat healthy.",
+    "Image": "./Images/domestic-shorthair-cat.png"
   },
   {
     "id": 6,
@@ -117,7 +122,8 @@
     "spayNeuterStatus": "N/A",
     "vaccinationRecords": "N/A",
     "dietAndFeedingRoutine": "Hopper's diet consists of fresh hay, vegetables, and rabbit pellets.",
-    "groomingNeeds": "Regular nail trimming is recommended for his comfort."
+    "groomingNeeds": "Regular nail trimming is recommended for his comfort.",
+    "Image": "./Images/rabbit.png"
   },
   {
     "id": 7,
@@ -137,7 +143,8 @@
     "spayNeuterStatus": "Neutered",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Oliver is fed a balanced diet of high-quality dog food and enjoys treats.",
-    "groomingNeeds": "Regular cleaning of facial wrinkles and folds is recommended for his breed."
+    "groomingNeeds": "Regular cleaning of facial wrinkles and folds is recommended for his breed.",
+    "Image": "./Images/english-bull-dog.png"
   },
   {
     "id": 8,
@@ -157,7 +164,8 @@
     "spayNeuterStatus": "Neutered",
     "vaccinationRecords": "Vaccination records are available upon request.",
     "dietAndFeedingRoutine": "Smokey enjoys a mix of dry and wet cat food, fed twice a day.",
-    "groomingNeeds": "Regular grooming to maintain his long, luxurious coat."
+    "groomingNeeds": "Regular grooming to maintain his long, luxurious coat.",
+    "Image": "./Images/persian-cat.png"
   },
   {
     "id": 9,
@@ -177,6 +185,7 @@
     "spayNeuterStatus": "N/A",
     "vaccinationRecords": "N/A",
     "dietAndFeedingRoutine": "Lenny enjoys a diet of insects, greens, and calcium supplements.",
-    "groomingNeeds": "Minimal grooming needs; regular cleaning of the terrarium is necessary."
+    "groomingNeeds": "Minimal grooming needs; regular cleaning of the terrarium is necessary.",
+    "Image": "./Images/lizard.png"
   }
 ]
