@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_app.controllers import lost_and_found_routes
+import os
 
 import json
 
@@ -10,10 +11,12 @@ app = Flask(__name__)
 from flask_cors import CORS
 CORS(app, support_credentials=True)
 
-f = open('flask_app\jsonFiles\mockData.json')
-data = json.load(f)
-
-f.close()
+jsonFile = 'flask_app\jsonFiles\mockData.json'
+data = {}
+if os.path.isfile(jsonFile):
+    f = open(jsonFile)
+    data = json.load(f)
+    f.close()
 
 @app.route('/pet-lost-and-found', methods=['GET'])
 def get_pet_lost_and_found():

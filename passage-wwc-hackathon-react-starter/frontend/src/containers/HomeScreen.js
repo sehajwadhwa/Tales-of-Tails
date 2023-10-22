@@ -41,6 +41,7 @@ const HomeScreen = () => {
   return (
     
     <div className="home-screen-wrapper">
+      <ControllerTest/>
       <div className="banner-wrapper">
         <div className="l-container">
           <img className="yellow-cat" src={yellowCat} />
