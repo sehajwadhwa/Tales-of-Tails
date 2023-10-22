@@ -1,0 +1,14 @@
+.subHeaderBar {
+  background: white;
+  overflow: hidden;
+  width: 100%;
+  height: 10rem;
+  box-shadow: 5px 5px 6px rgb(58, 50, 50);
+}
+.subHeaderContainer {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+}

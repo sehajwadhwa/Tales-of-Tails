@@ -1,11 +1,11 @@
 import styles from "../styles/Dashboard.module.css";
 import { PassageAuthGuard } from "@passageidentity/passage-react";
-import { usePassageUserInfo } from "../hooks/";
+import { usePassageUserInfo } from "../actions/";
 import LogoutButton from "../components/LogoutButton";
 
 function Dashboard() {
   const { userInfo, loading } = usePassageUserInfo();
-
+  console.log(userInfo);
   if (loading) {
     return (
       <div className={styles.dashboard}>
@@ -31,6 +31,7 @@ function Dashboard() {
           You successfully signed in with Passage. This is your homepage. <br />
           <br />
           Your username is: {userInfo?.email}
+          Your shelter is: {userInfo?.user_metadata?.shelter_name}
         </div>
         <LogoutButton />
       </div>

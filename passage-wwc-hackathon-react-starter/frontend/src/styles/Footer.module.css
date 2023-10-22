@@ -1,0 +1,14 @@
+.mainFooter {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  width: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(173, 167, 255, 0.6),
+    rgba(232, 229, 243, 0)
+  );
+  color: black;
+  justify-content: center;
+}

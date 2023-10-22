@@ -1,0 +1,66 @@
+a {
+  text-decoration: none;
+}
+.mainHeader {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(173, 167, 255, 0.6),
+    rgba(232, 229, 243, 0)
+  );
+  color: black;
+}
+
+.headerText {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  margin: 0px 10px;
+}
+
+.Logo {
+  background-image: url("../assets/paw.svg");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin-left: 6rem;
+}
+
+.content {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  margin: 0px 10px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link,
+a,
+a:visited {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #a17c1d;
+  text-decoration-thickness: 3px;
+  transition: 0.5s;
+}
+button {
+  font-size: 1.2rem;
+  background-color: #ada7ff;
+  color: white;
+  border-radius: 30px;
+  padding: 1rem;
+  border: 0;
+  width: 15rem;
+}
+button:hover {
+  box-shadow: rgba(244, 242, 245, 0.932) 0 0 90px 33px;
+  transform: translateY(-3px);
+}

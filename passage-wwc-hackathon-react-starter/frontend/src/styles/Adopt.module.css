@@ -1,0 +1,18 @@
+.screenContainer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+.adoptCards {
+  margin-top: 1rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 50px;
+  padding-right: 30rem;
+  max-width: 100%;
+  overflow: auto;
+  padding-left: 30rem;
+}

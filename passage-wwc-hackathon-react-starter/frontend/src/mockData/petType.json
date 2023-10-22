@@ -1,0 +1,17 @@
+[
+  { "value": "Dog", "label": "Dog" },
+  { "value": "cat", "label": "Cat" },
+  { "value": "rabbit", "label": "Rabbit" },
+  { "value": "bird", "label": "Bird" },
+  { "value": "hamster", "label": "Hamster" },
+  { "value": "guinea_pig", "label": "Guinea Pig" },
+  { "value": "snake", "label": "Snake" },
+  { "value": "turtle", "label": "Turtle" },
+  { "value": "fish", "label": "Fish" },
+  { "value": "ferret", "label": "Ferret" },
+  { "value": "horse", "label": "Horse" },
+  { "value": "gerbil", "label": "Gerbil" },
+  { "value": "chinchilla", "label": "Chinchilla" },
+  { "value": "lizard", "label": "Lizard" },
+  { "value": "other", "label": "Other" }
+]
