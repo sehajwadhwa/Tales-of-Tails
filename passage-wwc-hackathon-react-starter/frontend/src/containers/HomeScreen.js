@@ -10,9 +10,33 @@ import volunteer from "../assets/volunteer.png";
 import donate from "../assets/donations.png";
 import PetOverviewCard from "../components/PetOverviewCard";
 import HelperCard from "../components/HelperCard";
-import pets from "../mockData.json";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import pets from "../mockData/mockData.json";
+import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
+  const [startIndex, setStartIndex] = useState(0);
+  const cardsPerPage = 3;
+  const maxCards = 5;
+
+  const handleNext = () => {
+    if (startIndex + cardsPerPage < maxCards) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const visiblePets =
+    startIndex === 2
+      ? pets.slice(startIndex, startIndex + cardsPerPage - 1)
+      : pets.slice(startIndex, startIndex + cardsPerPage);
+  const shouldShowViewMore = startIndex + cardsPerPage === maxCards;
+
   return (
     <div className="home-screen-wrapper">
       <div className="banner-wrapper">
@@ -31,10 +55,12 @@ const HomeScreen = () => {
               today!
             </p>
           </div>
-          <button className="adopt-button">
-            <span> Adopt now</span>
-            <img alt="Adopt now" src={whitePaw} />
-          </button>
+          <Link to={"/adopt"}>
+            <button className="adopt-button">
+              <span> Adopt now</span>
+              <img alt="Adopt now" src={whitePaw} />
+            </button>
+          </Link>
         </div>
 
         <div className="r-container">
@@ -46,10 +72,25 @@ const HomeScreen = () => {
         <h2>
           Let’s find your new <span className="lilac-word">Best Friend!</span>
         </h2>
-        <div className="carousal">
-          {pets.map((pet) => {
-            return <PetOverviewCard name={pet.name} desc={pet.description} />;
-          })}
+        <div className="carousal-container">
+          <FaChevronLeft size="3rem" onClick={handlePrev} />
+          <div className="carousal">
+            {visiblePets.map((pet) => (
+              <PetOverviewCard
+                key={pet.name}
+                name={pet.name}
+                desc={pet.description}
+              />
+            ))}
+            {shouldShowViewMore && (
+              <Link to={"/adopt"}>
+                <div className="viewMore">
+                  <p>View More</p>
+                </div>
+              </Link>
+            )}
+          </div>
+          <FaChevronRight size="3rem" onClick={handleNext} />
         </div>
       </div>
       <div className="fun-fact-banner">
