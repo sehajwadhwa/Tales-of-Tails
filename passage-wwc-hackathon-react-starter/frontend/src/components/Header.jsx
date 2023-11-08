@@ -6,7 +6,6 @@ import axios from "axios";
 
 function Header({ user, setUser }) {
 
-
   return (
     <div className={styles.mainHeader}>
       <Link to={"/"}>
